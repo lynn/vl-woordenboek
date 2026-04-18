@@ -33,6 +33,17 @@ Zo was de laatste synchronistatie uitgevoerd op 12/02/2026 *(v12.11.2)*
 
 Wil je helpen om dit project beter te maken? Dat zou geweldig zijn! Of je nu een nieuw record toevoegt, een fout corrigeert of een nieuwe functie voorstelt, alle hulp is welkom.
 
+### Lokaal aan de slag
+
+Om de site op je eigen website te doen draaien, voer je de volgende stappen uit:
+
+1. Installeer PHP 8.x met de extensies `pdo_sqlite`, `bcmath`, en `intl`.
+2. Kopiëer `.env.example` naar `.env` en verander `DB_CONNECTION=mysql` in `DB_CONNECTION=sqlite`.
+3. Voer de commando's `composer setup` en `npm install` uit.
+4. Start de dev-omgeving met `composer dev`.
+
+Nu kan je de site bekijken op <http://localhost:8000/> in je browser.
+
 ### Hoe bijdragen?
 
 1. **Fork deze repository** naar je eigen GitHub-account.
