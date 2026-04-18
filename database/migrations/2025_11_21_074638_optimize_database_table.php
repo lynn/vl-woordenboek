@@ -8,6 +8,10 @@ return new class extends Migration
 {
     public function up(): void
     {
+        if (! Schema::hasTable('preferables')) {
+            return;
+        }
+
         Schema::table('preferables', function (Blueprint $table) {
             $table->index(['preferable_type', 'preferable_id', 'preferences_id'], 'idx_preferables_covering');
         });

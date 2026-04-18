@@ -9,6 +9,10 @@ return new class extends Migration
 
     public function up(): void
     {
+        if (config('database.default') === 'sqlite') {
+            return;
+        }
+
         Schema::table('article_sources', function (Blueprint $table) {
             $table->dropForeign('article_sources_article_id_foreign');
             $table->foreign('article_id')
